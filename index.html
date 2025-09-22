@@ -43,11 +43,14 @@
 
     /* Navigation */
     header {
+      /* White background with gentle shadow */
       background-color: #fff;
-      padding: 1rem 2.5rem;
+      padding: 1rem 2rem;
+      /* Stack the logo above the menu */
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
+      text-align: center;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -58,16 +61,24 @@
       font-size: 1.5rem;
       font-weight: 600;
       color: var(--primary-colour);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.5rem;
     }
     nav ul {
       list-style: none;
       display: flex;
       gap: 2rem;
+      justify-content: center;
+      /* Center the list container within the header */
+      margin: 0 auto;
     }
     nav a {
       font-weight: 500;
       color: var(--text-colour);
       transition: color 0.2s ease;
+      padding: 0.25rem 0.5rem;
     }
     nav a:hover {
       color: var(--primary-colour);
