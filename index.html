@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aleu Studios | New Collection</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /*
+      This stylesheet defines the look and feel of the Aleu Studios homepage.
+      A soft neutral palette with serif headings and clean sans‑serif body text
+      creates an elegant, art‑focused aesthetic inspired by the provided examples.
+    */
+    :root {
+      /* Colour palette updated to match provided RGB values */
+      --bg-colour: #ECE0D1;      /* rgb(236,224,209) */
+      --accent-colour: #DBC1AC;  /* rgb(219,193,172) */
+      --primary-colour: #967259; /* rgb(150,114,89) */
+      --text-colour: #38220F;    /* rgb(56,34,15) */
+      /* Typography */
+      --heading-font: 'Playfair Display', serif;
+      --body-font: 'Montserrat', sans-serif;
+    }
+
+    /* Global resets */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: var(--body-font);
+      background-color: var(--bg-colour);
+      color: var(--text-colour);
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navigation */
+    header {
+      background-color: #fff;
+      padding: 1rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    .logo {
+      font-family: var(--heading-font);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary-colour);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav a {
+      font-weight: 500;
+      color: var(--text-colour);
+      transition: color 0.2s ease;
+    }
+    nav a:hover {
+      color: var(--primary-colour);
+    }
+
+    /* Hero section */
+    .hero {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 6rem 1rem;
+      background-image: url('cached_assets_used/hero.png');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.25);
+    }
+    .hero-content {
+      position: relative;
+      max-width: 50rem;
+      z-index: 1;
+    }
+    .hero-content h1 {
+      font-family: var(--heading-font);
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero-content p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--primary-colour);
+      color: #fff;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: var(--accent-colour);
+    }
+
+    /* Sections */
+    section {
+      padding: 4rem 1rem;
+    }
+    .section-title {
+      text-align: center;
+      font-family: var(--heading-font);
+      font-size: 2.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Product grid on homepage */
+    .products-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+    .product-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      width: 18rem;
+      overflow: hidden;
+      text-align: center;
+    }
+    .product-card img {
+      width: 100%;
+      height: 12.5rem;
+      object-fit: cover;
+    }
+    .product-card .info {
+      padding: 1.25rem;
+    }
+    .product-card .info h3 {
+      font-family: var(--heading-font);
+      font-size: 1.25rem;
+      margin: 0.5rem 0 0.25rem;
+    }
+    .product-card .info p {
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Email subscription */
+    .email-sub {
+      background-color: var(--accent-colour);
+      padding: 3rem 1rem;
+      text-align: center;
+      border-radius: 12px;
+      margin: 3rem auto;
+      max-width: 50rem;
+    }
+    .email-sub h2 {
+      font-family: var(--heading-font);
+      font-size: 1.875rem;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+    .email-sub p {
+      color: #fff;
+      margin-bottom: 1.5rem;
+    }
+    .email-sub form {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .email-sub input[type="email"] {
+      padding: 0.75rem;
+      width: 16rem;
+      border: none;
+      border-radius: 4px;
+    }
+    .email-sub button {
+      padding: 0.75rem 1.5rem;
+      background-color: var(--primary-colour);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+    .email-sub button:hover {
+      background-color: var(--primary-colour);
+      opacity: 0.9;
+    }
+
+    /* Collection categories */
+    .collection {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .category-card {
+      width: 12rem;
+      text-align: center;
+    }
+    .category-card img {
+      width: 12rem;
+      height: 12rem;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #fff;
+      padding: 2.5rem 1rem;
+      text-align: center;
+      color: #888;
+      font-size: 0.875rem;
+      border-top: 1px solid #eee;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 48rem) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+      .hero-content p {
+        font-size: 1rem;
+      }
+      .section-title {
+        font-size: 1.75rem;
+      }
+      .product-card {
+        width: 90%;
+        max-width: 20rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="Logo.jpeg" alt="Aleu Studios logo" style="height: 40px; margin-right: 0.5rem; vertical-align: middle;" />
+      <span>Aleu Studios</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="paintings.html">Paintings</a></li>
+        <li><a href="prints.html">Prints</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Aleu Studios</h1>
+      <p>Explore our new collection of original oil paintings</p>
+      <a class="btn" href="paintings.html">Shop Collection</a>
+    </div>
+  </div>
+
+  <section aria-labelledby="shop-new">
+    <h2 id="shop-new" class="section-title">Shop the New</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="cached_assets_used/painting1.png" alt="Wildflower Bouquet painting">
+        <div class="info">
+          <h3>Wildflower Bouquet</h3>
+          <p>From $150</p>
+          <a class="btn" href="paintings.html#bouquet">View Options</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="cached_assets_used/painting2.png" alt="Rustic Countryside painting">
+        <div class="info">
+          <h3>Rustic Countryside</h3>
+          <p>From $200</p>
+          <a class="btn" href="paintings.html#countryside">View Options</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="cached_assets_used/painting3.png" alt="Coastal Sunset painting">
+        <div class="info">
+          <h3>Coastal Sunset</h3>
+          <p>From $180</p>
+          <a class="btn" href="paintings.html#sunset">View Options</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="email-sub" aria-labelledby="print-club">
+    <h2 id="print-club">Join the Print Club</h2>
+    <p>Be the first to know about new releases and exclusive offers.</p>
+    <form onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+      <input type="email" placeholder="Your email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <section aria-labelledby="collection">
+    <h2 id="collection" class="section-title">Shop by Collection</h2>
+    <div class="collection">
+      <div class="category-card">
+        <a href="paintings.html"><img src="cached_assets_used/painting1.png" alt="Original paintings category image"></a>
+        <h4>Original Paintings</h4>
+      </div>
+      <div class="category-card">
+        <a href="prints.html"><img src="cached_assets_used/painting2.png" alt="Fine art prints category image"></a>
+        <h4>Fine Art Prints</h4>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Aleu Studios. All rights reserved.
+  </footer>
+</body>
+</html>
