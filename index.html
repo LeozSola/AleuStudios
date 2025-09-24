@@ -10,8 +10,8 @@
   <style>
     /*
       This stylesheet defines the look and feel of the Aleu Studios homepage.
-      A soft neutral palette with serif headings and clean sans‑serif body text
-      creates an elegant, art‑focused aesthetic inspired by the provided examples.
+      A soft neutral palette with serif headings and clean sans-serif body text
+      creates an elegant, art-focused aesthetic inspired by the provided examples.
     */
     :root {
       /* Colour palette updated to match provided RGB values */
@@ -134,18 +134,22 @@
       background-color: var(--accent-colour);
     }
 
-    /* Sections */
+    /* Section spacing */
     section {
       padding: 4rem 1rem;
+      max-width: 70rem;
+      margin: 0 auto;
     }
     .section-title {
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      font-size: 2rem;
       text-align: center;
+      margin-bottom: 2.5rem;
       font-family: var(--heading-font);
-      font-size: 2.25rem;
-      margin-bottom: 1.5rem;
     }
 
-    /* Product grid on homepage */
+    /* Products grid */
     .products-grid {
       display: flex;
       flex-wrap: wrap;
@@ -158,38 +162,44 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       width: 18rem;
       overflow: hidden;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
     }
     .product-card img {
       width: 100%;
-      height: 12.5rem;
+      height: 12rem;
       object-fit: cover;
     }
     .product-card .info {
-      padding: 1.25rem;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      text-align: center;
+      flex: 1;
     }
-    .product-card .info h3 {
+    .product-card h3 {
       font-family: var(--heading-font);
-      font-size: 1.25rem;
-      margin: 0.5rem 0 0.25rem;
+      font-size: 1.4rem;
     }
-    .product-card .info p {
-      font-size: 0.875rem;
-      margin-bottom: 1rem;
+    .product-card p {
+      font-size: 0.95rem;
+    }
+    .product-card .btn {
+      margin-top: auto;
     }
 
-    /* Email subscription */
+    /* Email signup */
     .email-sub {
-      background-color: var(--accent-colour);
-      padding: 3rem 1rem;
+      background-color: var(--primary-colour);
+      color: #fff;
       text-align: center;
-      border-radius: 12px;
-      margin: 3rem auto;
-      max-width: 50rem;
+      border-radius: 8px;
+      padding: 3rem 1.5rem;
     }
     .email-sub h2 {
       font-family: var(--heading-font);
-      font-size: 1.875rem;
+      font-size: 2rem;
       margin-bottom: 0.5rem;
       color: #fff;
     }
@@ -211,7 +221,7 @@
     }
     .email-sub button {
       padding: 0.75rem 1.5rem;
-      background-color: var(--primary-colour);
+      background-color: var(--accent-colour);
       color: #fff;
       border: none;
       border-radius: 4px;
@@ -220,8 +230,7 @@
       transition: background-color 0.3s ease;
     }
     .email-sub button:hover {
-      background-color: var(--primary-colour);
-      opacity: 0.9;
+      background-color: #c8a894;
     }
 
     /* Collection categories */
@@ -291,36 +300,30 @@
   <div class="hero">
     <div class="hero-content">
       <h1>Welcome to Aleu Studios</h1>
-      <p>Explore our new collection of original oil paintings</p>
+      <p>Explore original Hollow Knight oil paintings and matching fine art prints.</p>
       <a class="btn" href="paintings.html">Shop Collection</a>
     </div>
   </div>
 
   <section aria-labelledby="shop-new">
-    <h2 id="shop-new" class="section-title">Shop the New</h2>
+    <h2 id="shop-new" class="section-title">Featured Originals</h2>
     <div class="products-grid">
       <div class="product-card">
-        <img src="cached_assets_used/painting1.png" alt="Wildflower Bouquet painting">
+        <img src="cached_assets_used/Hornet.jpg" alt="Hornet original oil painting">
         <div class="info">
-          <h3>Wildflower Bouquet</h3>
-          <p>From $150</p>
-          <a class="btn" href="paintings.html#bouquet">View Options</a>
+          <h3>Hornet &mdash; Original Oil Painting</h3>
+          <p>Hand-painted 16&times;20 inch canvas featuring Hornet from the<em>Hollow Knight</em> series.</p>
+          <p><strong>Price: $250</strong></p>
+          <a class="btn" href="paintings.html#hornet">View Hornet Details</a>
         </div>
       </div>
       <div class="product-card">
-        <img src="cached_assets_used/painting2.png" alt="Rustic Countryside painting">
+        <img src="cached_assets_used/TheKnight.jpg" alt="The Knight original oil painting">
         <div class="info">
-          <h3>Rustic Countryside</h3>
-          <p>From $200</p>
-          <a class="btn" href="paintings.html#countryside">View Options</a>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="cached_assets_used/painting3.png" alt="Coastal Sunset painting">
-        <div class="info">
-          <h3>Coastal Sunset</h3>
-          <p>From $180</p>
-          <a class="btn" href="paintings.html#sunset">View Options</a>
+          <h3>The Knight &mdash; Original Oil Painting</h3>
+          <p>Signature 24&times;30 inch canvas of The Knight, the centerpiece of the collection.</p>
+          <p><strong>Price: $475</strong></p>
+          <a class="btn" href="paintings.html#the-knight">View Knight Details</a>
         </div>
       </div>
     </div>
@@ -339,11 +342,11 @@
     <h2 id="collection" class="section-title">Shop by Collection</h2>
     <div class="collection">
       <div class="category-card">
-        <a href="paintings.html"><img src="cached_assets_used/painting1.png" alt="Original paintings category image"></a>
+        <a href="paintings.html"><img src="cached_assets_used/Hornet.jpg" alt="Original Hornet painting"></a>
         <h4>Original Paintings</h4>
       </div>
       <div class="category-card">
-        <a href="prints.html"><img src="cached_assets_used/painting2.png" alt="Fine art prints category image"></a>
+        <a href="prints.html"><img src="cached_assets_used/TheKnight.jpg" alt="Fine art prints of The Knight"></a>
         <h4>Fine Art Prints</h4>
       </div>
     </div>
@@ -354,5 +357,4 @@
   </footer>
 </body>
 </html>
-
 

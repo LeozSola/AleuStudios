@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aleu Studios | Fine Art Prints</title>
+  <title>Aleu Studios | The Knight Fine Art Prints</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
@@ -68,7 +68,7 @@
       color: var(--primary-colour);
     }
     .page-banner {
-      background-image: url('cached_assets_used/Hornet.jpg');
+      background-image: url('cached_assets_used/TheKnight.jpg');
       background-size: cover;
       background-position: center;
       position: relative;
@@ -97,15 +97,47 @@
       max-width: 70rem;
       margin: 0 auto;
     }
-    .intro {
-      max-width: 45rem;
-      margin: 0 auto 3rem;
-      text-align: center;
+    .back-link {
+      margin-bottom: 2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 500;
+      color: var(--primary-colour);
     }
-    .intro p {
+    .back-link::before {
+      content: '\2190';
+    }
+    .overview {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      margin-bottom: 3rem;
+      display: grid;
+      gap: 1.5rem;
+    }
+    .overview h2 {
+      font-family: var(--heading-font);
+      font-size: 2rem;
+    }
+    .overview p {
       margin-bottom: 1rem;
     }
-    .prints-grid {
+    .specs, .shipping {
+      list-style: none;
+      padding-left: 0;
+      display: grid;
+      gap: 0.5rem;
+    }
+    .specs li::before, .shipping li::before {
+      content: '\2013\00a0';
+      color: var(--primary-colour);
+    }
+    .specs li span, .shipping li span {
+      font-weight: 600;
+    }
+    .print-options {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
       gap: 2.5rem;
@@ -120,36 +152,25 @@
     }
     .print-card img {
       width: 100%;
-      height: 14rem;
+      height: 16rem;
       object-fit: cover;
+      margin-bottom: 1rem;
     }
     .print-card .info {
       padding: 1.5rem;
-      flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
+      gap: 0.5rem;
       text-align: center;
     }
-    .print-card h3 {
+    .print-card .info h3 {
       font-family: var(--heading-font);
-      font-size: 1.5rem;
+      font-size: 1.4rem;
     }
-    .print-card p {
-      font-size: 0.95rem;
-    }
-    .btn {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background-color: var(--primary-colour);
-      color: #fff;
-      border-radius: 4px;
-      font-weight: 500;
-      margin-top: auto;
-      transition: background-color 0.3s ease;
-    }
-    .btn:hover {
-      background-color: var(--accent-colour);
+    .price {
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--primary-colour);
     }
     footer {
       background-color: #fff;
@@ -179,32 +200,64 @@
   </header>
 
   <div class="page-banner">
-    <h1>Fine Art Prints</h1>
+    <h1>The Knight - Fine Art Print</h1>
   </div>
 
   <main class="content">
-    <div class="intro">
-      <p>Explore fine art prints of my original Hollow Knight paintings. Select a painting below to view available print sizes, pricing, and shipping details.</p>
-    </div>
+    <a class="back-link" href="prints.html">Back to Prints</a>
 
-    <div class="prints-grid">
-      <div class="print-card">
-        <img src="cached_assets_used/Hornet.jpg" alt="Hornet painting preview">
+    <section class="print-options">
+      <article class="print-card">
+        <img src="cached_assets_used/The_Knight_8x10_Print.jpg" alt="The Knight 8 by 10 inch fine art print">
         <div class="info">
-          <h3>Hornet Prints</h3>
-          <p>Archival reproductions of the Hornet oil painting, available in three sizes.</p>
-          <a class="btn" href="hornet-prints.html">View Hornet Prints</a>
+          <h3>The Knight 8x10 Print</h3>
+          <p>Archival print on Moab Entrada Rag Bright paper.</p>
+          <p class="price">$45</p>
         </div>
-      </div>
-      <div class="print-card">
-        <img src="cached_assets_used/TheKnight.jpg" alt="The Knight painting preview">
+      </article>
+      <article class="print-card">
+        <img src="cached_assets_used/The_Knight_11x14_print.jpg" alt="The Knight 11 by 14 inch fine art print">
         <div class="info">
-          <h3>The Knight Prints</h3>
-          <p>Fine art prints of The Knight, produced with museum-grade inks and paper.</p>
-          <a class="btn" href="knight-prints.html">View The Knight Prints</a>
+          <h3>The Knight 11x14 Print</h3>
+          <p>Studio-produced print with pigment-based inks.</p>
+          <p class="price">$80</p>
         </div>
+      </article>
+      <article class="print-card">
+        <img src="cached_assets_used/The_knight_16x20_Print.jpg" alt="The Knight 16 by 20 inch fine art print">
+        <div class="info">
+          <h3>The Knight 16x20 Print</h3>
+          <p>Professional giclee from my trusted fine-art lab.</p>
+          <p class="price">$130</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="overview">
+      <h2>The Knight - Fine Art Print</h2>
+      <p>High-quality archival print reproduction of my original The Knight oil painting. Each print captures the colors and details of the original canvas, produced using museum-grade inks and paper for lasting vibrancy.</p>
+      <p>Perfect for fans who want to enjoy the art at an accessible price point.</p>
+      <ul class="specs">
+        <li><span>Paper:</span> Moab Entrada Rag Bright 300gsm, 100% cotton, acid-free, archival quality</li>
+        <li><span>Ink:</span> Pigment-based for rich color and longevity</li>
+        <li><span>Available sizes:</span> 8x10, 11x14, 16x20</li>
+        <li><span>Packaging:</span> Protective sleeve, acid-free backing board, rigid mailer</li>
+        <li><span>Edition:</span> Open edition (not limited)</li>
+      </ul>
+      <div>
+        <h3>Processing &amp; Shipping:</h3>
+        <ul class="shipping">
+          <li><span>8x10 and 11x14 prints:</span> Printed in-studio</li>
+          <li><span>Processing time:</span> 3-5 business days</li>
+          <li><span>Transit time (U.S.):</span> 2-5 business days via USPS or UPS</li>
+          <li><span>16x20 prints:</span> Professionally printed giclee, drop-shipped from my fine-art lab</li>
+          <li><span>Processing time:</span> 7-10 business days</li>
+          <li><span>Transit time (U.S.):</span> 2-5 business days</li>
+          <li><span>All prints ship flat:</span> Do Not Bend protection included</li>
+        </ul>
       </div>
-    </div>
+    </section>
+
   </main>
 
   <footer>
@@ -212,3 +265,7 @@
   </footer>
 </body>
 </html>
+
+
+
+
